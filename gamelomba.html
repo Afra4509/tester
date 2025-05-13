@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Dolanan Cerdas - Kuis Bahasa Jawa Interaktif">
+  <meta name="keywords" content="quiz, kuis, bahasa jawa, game, edukasi, dolanan cerdas">
+  <meta name="author" content="Sandi Mulya">
+  <title>Dolanan Cerdas - Kuis Bahasa Jawa Interaktif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="gamelomba.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5692/5692030.png" type="image/png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Dolanan Cerdas</h1>
+    <p class="tagline">Sinau Basa Jawa Kanthi Nyenengake</p>
+  </header>
+
+  <!-- Language Selection Screen -->
+  <main>
+    <section class="screen" id="language-screen">
+      <div class="container">
+        <h2>Pilih Bahasa</h2>
+        <div class="language-selection">
+          <button id="java-language-button" class="language-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/5111/5111777.png" alt="Bahasa Jawa" width="48" height="48">
+            <span>Basa Jawa</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Level Selection Screen -->
+    <section class="screen" id="start-screen" style="display: none;">
+      <div class="container">
+        <h2>Pilih Level</h2>
+        <div class="level-description">
+          <p>Pilih level sing pengen dipraktekna:</p>
+        </div>
+        <div class="level-selection">
+          <button id="level1-button" class="level-button">
+            <span class="level-number">1</span>
+            <span class="level-name">Gampang (Mudah)</span>
+          </button>
+          <button id="level2-button" class="level-button">
+            <span class="level-number">2</span>
+            <span class="level-name">Lumayan (Sedang)</span>
+          </button>
+          <button id="level3-button" class="level-button">
+            <span class="level-number">3</span>
+            <span class="level-name">Sedeng (Menengah)</span>
+          </button>
+          <button id="level4-button" class="level-button">
+            <span class="level-number">4</span>
+            <span class="level-name">Angel (Sulit)</span>
+          </button>
+          <button id="level5-button" class="level-button">
+            <span class="level-number">5</span>
+            <span class="level-name">Paling Angel (Sangat Sulit)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section class="screen" id="quiz-screen" style="display: none;">
+      <div class="container">
+        <div class="quiz-header">
+          <div id="level-display" class="level-badge"></div>
+          <div id="question-number" class="question-counter"></div>
+          <div id="timer-container">
+            <span id="timer-text">Wektu: <span id="timer">30</span>s</span>
+          </div>
+        </div>
+        
+        <div id="question-container">
+          <p id="question-text" class="question"></p>
+          <div id="answer-buttons" class="answers"></div>
+          <div id="feedback-message" class="feedback-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Screen -->
+    <section class="screen" id="result-screen" style="display: none;">
+      <div class="container">
+        <h2 id="result-title"></h2>
+        <div class="result-content">
+          <p id="result-score" class="result-score"></p>
+          <p id="result-message" class="result-message"></p>
+          <div id="result-buttons" class="result-buttons"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Score Screen -->
+    <section class="screen" id="final-score-screen" style="display: none;">
+      <div class="container">
+        <h2>Biji Total</h2>
+        <div class="final-score-content">
+          <table id="final-score-table" class="score-table"></table>
+          <p id="total-final-score" class="total-score"></p>
+          <p id="achievement-message" class="achievement"></p>
+          <div class="final-score-buttons">
+            <button id="play-again-button" class="result-button">Main Maneh</button>
+            <button id="return-levels-button" class="result-button">Wangsul</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="copyright">&copy; 2025 Dolanan Cerdas by Sandi Mulya</p>
+  </footer>
+
+  <!-- Audio elements for sound effects -->
+  <audio id="click-sound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/270/270-preview.mp3"></audio>
+
+  <script src="gamelomba.js"></script>
+</body>
+</html>
